@@ -16,11 +16,11 @@ using System.Text.RegularExpressions;
 
 namespace ACEMP
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
         string CAMINHO_SALVAR;
 
-        public Form1()
+        public Main()
         {
             InitializeComponent();
         }
@@ -94,7 +94,7 @@ namespace ACEMP
             );
             if (escolha == DialogResult.Yes)
             {
-
+                System.Diagnostics.Process.Start("https://www.vakinha.com.br/vaquinha/projeto-acemp");
             }
         }
 
@@ -108,7 +108,7 @@ namespace ACEMP
             );
             if (escolha == DialogResult.Yes)
             {
-                
+                System.Diagnostics.Process.Start("https://github.com/rponciano/ACEMP");
             }
         }
 

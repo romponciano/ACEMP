@@ -1,6 +1,6 @@
 ﻿namespace ACEMP
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.btnSelecionarCsv = new System.Windows.Forms.Button();
             this.btnSeleionarSaida = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -141,7 +142,9 @@
             this.Controls.Add(this.btnSelecionarCsv);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ACEMP";
