@@ -1,4 +1,4 @@
-# ACEMP - Automodel Contábel para Empresas
+# ACEMP - Automodel Contábil para Empresas
 
 ## Descrição
 O projeto consiste de um sistema para ler arquivos CSV das notas cariocas (https://notacarioca.rio.gov.br/senhaweb/login.aspx) e gerar uma planilha .xlsx (para Excel) que auxilie na análise contábil de empresas de lucro presumido.<br>
