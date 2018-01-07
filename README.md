@@ -8,7 +8,7 @@ O modelo, as necessidades e os cálculos realizados nas fórmulas foram definido
 ## Instalação
 Para instalar o programa, basta baixar o arquivo <a href="https://github.com/rponciano/ACEMP/blob/master/ACEMPInstaller.msi">ACEMPInstaller.msi</a> e executar em sua máquina. O processo de instalação é bem simples, em português e segue o padrão "Avançar, Avançar, Concluir".<br>
 Um atalho será criado na área de trabalho e poderá começar a utilizar. <br>
-<b>Importante: Mesmo que a instalação pareça não estar avançando na barra de progresso, espere que ela irá concluir.</b>
+<b>Importante: Mesmo que a instalação pareça não avançar na barra de progresso, espere que ela irá concluir.</b>
 
 ## Utilização
 <i>em breve</i>
