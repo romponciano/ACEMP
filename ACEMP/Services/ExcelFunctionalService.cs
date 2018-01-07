@@ -38,15 +38,17 @@ namespace ACEMP.Services
 
             ExcelLayoutService.formatarValores(workbook, caminho, linhas);
 
-            gerarColunaCliente(workbook, caminho, linhas);
+            gerarColunaCliente(workbook, caminho, linhas, csv);
             
             gerarLiquido(workbook, caminho, linhas);
 
             gerarTotal(workbook, caminho, linhas);
 
+            if (csv.temExterior) gerarNacional(workbook, caminho, linhas, csv);
+
             gerarColunaTributo(workbook, caminho, linhas);
 
-            gerarColunaVrImposto(workbook, caminho, linhas);
+            gerarColunaVrImposto(workbook, caminho, linhas, csv);
 
             gerarColunaCompensar(workbook, caminho, linhas);
 
@@ -71,7 +73,7 @@ namespace ACEMP.Services
             workbook.Close();
             excelEngine.Dispose();
         }
-
+        
         private static void gerarModeloBase(IWorkbook wb, string caminho)
         {
             IWorksheet planilha = wb.Worksheets[0];
@@ -100,13 +102,29 @@ namespace ACEMP.Services
             wb.SaveAs(caminho);
         }
 
-        private static void gerarColunaCliente(IWorkbook wb, string caminho, Dictionary<string, int> linhas)
+        private static void gerarColunaCliente(IWorkbook wb, string caminho, Dictionary<string, int> linhas, CSV csv)
         {
             IWorksheet planilha = wb.Worksheets[0];
-            for (int i = 6; i < linhas["ultimaLinha"]; i++)
+            if(csv.temExterior)
             {
-                planilha.Range["C" + i].HorizontalAlignment = ExcelHAlign.HAlignLeft;
-                planilha.Range["C" + i + ":F" + i].Merge();
+                for (int i = 6; i < linhas["ultimaLinha"]; i++)
+                {
+                    planilha.Range["C" + i].HorizontalAlignment = ExcelHAlign.HAlignLeft;
+                    planilha.Range["C" + i + ":F" + i].Merge();
+                    if ( csv.clientesExterior.Contains(i) )
+                    {
+                        planilha.Range["C" + i].Text = "** EXTERIOR ** " + planilha.Range["C" + i].Value.ToString();
+                        planilha.Range["C" + i].CellStyle.Font.Bold = true;
+                    }
+                }
+            }
+            else
+            {
+                for (int i = 6; i < linhas["ultimaLinha"]; i++)
+                {
+                    planilha.Range["C" + i].HorizontalAlignment = ExcelHAlign.HAlignLeft;
+                    planilha.Range["C" + i + ":F" + i].Merge();
+                }
             }
             wb.SaveAs(caminho);
         }
@@ -132,6 +150,34 @@ namespace ACEMP.Services
             wb.SaveAs(caminho);
         }
 
+        private static void gerarNacional(IWorkbook workbook, string caminho, Dictionary<string, int> linhas, CSV csv)
+        {
+            IWorksheet planilha = workbook.Worksheets[0];
+            int linhaNacional = linhas["ultimaLinha"] + 1;
+            planilha.Range["A" + linhaNacional].Text = "NACIONAL";
+            planilha.Range["A" + linhaNacional].HorizontalAlignment = ExcelHAlign.HAlignCenter;
+            planilha.Range["A" + linhaNacional + ":F" + linhaNacional].Merge();
+            planilha.Range["A" + linhaNacional + ":L" + linhaNacional].CellStyle.Font.Bold = true;
+            planilha.Range["A" + linhaNacional + ":L" + linhaNacional].CellStyle.FillPattern = ExcelPattern.Solid;
+            planilha.Range["A" + linhaNacional + ":L" + linhaNacional].CellStyle.Interior.Color = Color.LightGray;
+            planilha.Range["A" + linhaNacional + ":L" + linhaNacional].BorderInside();
+            planilha.Range["A" + linhaNacional + ":L" + linhaNacional].BorderAround();
+            planilha.Range["G" + linhaNacional].Text = planilha.Range["G"+(linhaNacional-1)].CalculatedValue;
+            for (int i=7; i < linhas["ultimaLinha"]; i++)
+            {
+                if (csv.clientesExterior.Contains(i)) {
+                    planilha.Range["G" + linhaNacional].Text = planilha.Range["G" + linhaNacional].Value + "-G" + i;
+                }
+            }
+            planilha.Range["G" + linhaNacional].Formula = "=" + planilha.Range["G" + linhaNacional].Value;
+            planilha.Range["H" + linhaNacional].Formula = "=H" + (linhaNacional - 1);
+            planilha.Range["I" + linhaNacional].Formula = "=I" + (linhaNacional - 1);
+            planilha.Range["J" + linhaNacional].Formula = "=J" + (linhaNacional - 1);
+            planilha.Range["K" + linhaNacional].Formula = "=K" + (linhaNacional - 1);
+            planilha.Range["L" + linhaNacional].Formula =
+                "=G" + linhaNacional + "-H" + linhaNacional + "-I" + linhaNacional + "-J" + linhaNacional + "-K" + linhaNacional;
+        }
+
         private static void gerarColunaTributo(IWorkbook workbook, string caminho, Dictionary<string, int> linhas)
         {
             IWorksheet planilha = workbook.Worksheets[0];
@@ -148,12 +194,21 @@ namespace ACEMP.Services
             workbook.SaveAs(caminho);
         }
 
-        private static void gerarColunaVrImposto(IWorkbook workbook, string caminho, Dictionary<string, int> linhas)
+        private static void gerarColunaVrImposto(IWorkbook workbook, string caminho, Dictionary<string, int> linhas, CSV csv)
         {
             IWorksheet planilha = workbook.Worksheets[0];
             planilha.Range["D" + linhas["primeiraLinha"]].Text = "Vr Imposto";
-            planilha.Range["D" + linhas["linhaPis"]].Formula = "=G" + linhas["ultimaLinha"] + "*C" + linhas["linhaPis"];
-            planilha.Range["D" + linhas["linhaCofins"]].Formula = "=G" + linhas["ultimaLinha"] + "*C" + linhas["linhaCofins"];
+            
+            if(csv.temExterior)
+            {
+                planilha.Range["D" + linhas["linhaPis"]].Formula = "=G" + (linhas["ultimaLinha"]+1) + "*C" + linhas["linhaPis"];
+                planilha.Range["D" + linhas["linhaCofins"]].Formula = "=G" + (linhas["ultimaLinha"]+1) + "*C" + linhas["linhaCofins"];
+            }
+            else
+            {
+                planilha.Range["D" + linhas["linhaPis"]].Formula = "=G" + linhas["ultimaLinha"] + "*C" + linhas["linhaPis"];
+                planilha.Range["D" + linhas["linhaCofins"]].Formula = "=G" + linhas["ultimaLinha"] + "*C" + linhas["linhaCofins"];
+            }
             planilha.Range["D" + linhas["linhaCsll"]].Formula = "=G" + linhas["ultimaLinha"] + "*C" + linhas["linhaCsll"];
             planilha.Range["D" + linhas["linhaIrpj"]].Formula = "=G" + linhas["ultimaLinha"] + "*C" + linhas["linhaIrpj"];
             workbook.SaveAs(caminho);

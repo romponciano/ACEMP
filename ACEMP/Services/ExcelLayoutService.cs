@@ -15,7 +15,7 @@ namespace ACEMP.Services
         {
             IWorksheet planilha = workbook.Worksheets[0];
             planilha.Range["D" + linhas["linhaPis"] + ":F" + linhas["linhaIrpj"]].NumberFormat = "#,##0.00";
-            planilha.Range["G7:L" + linhas["ultimaLinha"]].NumberFormat = "#,##0.00";
+            planilha.Range["G7:L" + (linhas["ultimaLinha"] + 1)].NumberFormat = "#,##0.00";
             planilha.Range["C" + linhas["linhaPis"] + ":C" + linhas["linhaIrpj"]].NumberFormat = "0.00%";
             workbook.SaveAs(caminho);
         }
@@ -52,15 +52,13 @@ namespace ACEMP.Services
             IStyle headerImpostosStyle = wb.Styles.Add("HeaderImpostosStyle");
             headerImpostosStyle.HorizontalAlignment = ExcelHAlign.HAlignCenter;
             headerImpostosStyle.Font.Bold = true;
-            planilha.Range["A" + linhas["ultimaLinha"] + ":L" + linhas["ultimaLinha"] + 11].CellStyle.PatternColor = Color.White;
+            planilha.Range["A" + linhas["ultimaLinha"] + ":L" + (linhas["ultimaLinha"] + 11)].CellStyle.PatternColor = Color.White;
             headerImpostosStyle.FillPattern = ExcelPattern.Solid;
             headerImpostosStyle.Interior.Color = Color.LightGray;
             planilha.Range["B" + linhas["primeiraLinha"] + ":H" + linhas["primeiraLinha"]].CellStyle = headerImpostosStyle;
             // salvar
             wb.SaveAs(caminho);
         }
-
-        
 
         public static void alinharDados(IWorkbook wb, string caminho)
         {

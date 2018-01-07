@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ACEMP.Services
 {
@@ -48,6 +49,18 @@ namespace ACEMP.Services
             string ano = dataCompleta.GetValue(2).ToString().Split(' ').GetValue(0).ToString();
 
             CSV csv = new CSV(f, nome, mes, ano, cnpj);
+
+            int aux = 7;
+            foreach(DataRow linha in original.Rows)
+            {
+                if (linha[26].ToString().Equals(""))
+                {
+                    csv.clientesExterior.Add(aux);
+                }
+                aux++;
+            }
+            csv.clientesExterior.RemoveAt(csv.clientesExterior.Count() - 1);
+            if (csv.clientesExterior.Count > 0) csv.temExterior = true;
 
             return csv;
         }

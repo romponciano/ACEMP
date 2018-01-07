@@ -16,6 +16,7 @@ namespace ACEMP.Model
         public string cnpj { get; set; }
         public Boolean temExterior { get; set; }
         public Tributo tributo { get; set; }
+        public List<int> clientesExterior { get; set; }
 
         public CSV(DataTable csvFinal, string nomeEmpresa, string mes, string ano, string cnpj)
         {
@@ -25,6 +26,7 @@ namespace ACEMP.Model
             this.ano = ano;
             this.cnpj = cnpj;
             this.temExterior = false;
+            clientesExterior = new List<int>();
         }
     }
 }
