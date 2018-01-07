@@ -39,7 +39,6 @@ P:\ACEMP\ACEMP\bin\Debug\Syncfusion.XlsIO.Wpf.dll
 P:\ACEMP\ACEMP\bin\Debug\Syncfusion.Compression.Base.xml
 P:\ACEMP\ACEMP\bin\Debug\Syncfusion.XlsIO.Base.xml
 P:\ACEMP\ACEMP\bin\Debug\Syncfusion.XlsIO.Wpf.xml
-P:\ACEMP\ACEMP\obj\Debug\ACEMP.csprojResolveAssemblyReference.cache
 P:\ACEMP\ACEMP\obj\Debug\ACEMP.Main.resources
 P:\ACEMP\ACEMP\obj\Debug\ACEMP.Properties.Resources.resources
 P:\ACEMP\ACEMP\obj\Debug\ACEMP.csproj.GenerateResource.Cache
