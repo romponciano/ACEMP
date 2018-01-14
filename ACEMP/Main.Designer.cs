@@ -39,6 +39,7 @@
             this.menuAjuda = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSobre = new System.Windows.Forms.ToolStripMenuItem();
             this.menuDoar = new System.Windows.Forms.ToolStripMenuItem();
+            this.verificarAtualizaçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,7 +101,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuAjuda,
             this.menuSobre,
-            this.menuDoar});
+            this.menuDoar,
+            this.verificarAtualizaçõesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -129,7 +131,15 @@
             this.menuDoar.Text = "Doar";
             this.menuDoar.Click += new System.EventHandler(this.btnDoar_click);
             // 
-            // Form1
+            // verificarAtualizaçõesToolStripMenuItem
+            // 
+            this.verificarAtualizaçõesToolStripMenuItem.Name = "verificarAtualizaçõesToolStripMenuItem";
+            this.verificarAtualizaçõesToolStripMenuItem.Size = new System.Drawing.Size(130, 20);
+            this.verificarAtualizaçõesToolStripMenuItem.Text = "Verificar Atualizações";
+            this.verificarAtualizaçõesToolStripMenuItem.Visible = false;
+            this.verificarAtualizaçõesToolStripMenuItem.Click += new System.EventHandler(this.btnUpdate_click);
+            // 
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -145,7 +155,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ACEMP";
             this.menuStrip1.ResumeLayout(false);
@@ -167,6 +177,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuSobre;
         private System.Windows.Forms.ToolStripMenuItem menuAjuda;
         private System.Windows.Forms.ToolStripMenuItem menuDoar;
+        private System.Windows.Forms.ToolStripMenuItem verificarAtualizaçõesToolStripMenuItem;
     }
 }
 

@@ -54,7 +54,7 @@ namespace ACEMP.Services
 
             gerarColunaImposto(workbook, caminho, linhas);
 
-            gerarColunaVencimento(workbook, caminho, linhas);
+            //gerarColunaVencimento(workbook, caminho, linhas);
 
             ExcelLayoutService.ajustarDatas(workbook, caminho, linhas);
             
@@ -228,7 +228,7 @@ namespace ACEMP.Services
         private static void gerarColunaImposto(IWorkbook workbook, string caminho, Dictionary<string, int> linhas)
         {
             IWorksheet planilha = workbook.Worksheets[0];
-            planilha.Range["F" + linhas["primeiraLinha"]].Text = "Imposto";
+            planilha.Range["F" + linhas["primeiraLinha"]].Text = "Imposto a pagar";
             planilha.Range["F" + linhas["linhaPis"]].Formula = "=D" + linhas["linhaPis"] + "-E" + linhas["linhaPis"];
             planilha.Range["F" + linhas["linhaCofins"]].Formula = "=D" + linhas["linhaCofins"] + "-E" + linhas["linhaCofins"];
             planilha.Range["F" + linhas["linhaCsll"]].Formula = "=D" + linhas["linhaCsll"] + "-E" + linhas["linhaCsll"];

@@ -24,6 +24,7 @@ namespace ACEMP.Services
             f.Columns.Add("CSLL");
             f.Columns.Add("Líquido");
 
+            int aux = 0;
             for (int i = 0; i < original.Rows.Count; i++)
             {
                 f.Rows.Add();
@@ -40,17 +41,20 @@ namespace ACEMP.Services
                     float.Parse(f.Rows[i]["Vr Irf"].ToString()) -
                     float.Parse(f.Rows[i]["COFINS"].ToString()) -
                     float.Parse(f.Rows[i]["CSLL"].ToString());
+                aux = i;
             }
 
-            string nome = original.Rows[1][13].ToString();
-            string cnpj = original.Rows[1][10].ToString();
-            string[] dataCompleta = original.Rows[1][4].ToString().Split('/');
+            if (aux <= 2) aux = 0;
+            else aux = 1;
+            string nome = original.Rows[aux][13].ToString();
+            string cnpj = original.Rows[aux][10].ToString();
+            string[] dataCompleta = original.Rows[aux][4].ToString().Split('/');
             string mes = dataCompleta.GetValue(1).ToString();
             string ano = dataCompleta.GetValue(2).ToString().Split(' ').GetValue(0).ToString();
 
             CSV csv = new CSV(f, nome, mes, ano, cnpj);
 
-            int aux = 7;
+            aux = 7;
             foreach(DataRow linha in original.Rows)
             {
                 if (linha[26].ToString().Equals(""))

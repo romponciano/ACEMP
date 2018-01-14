@@ -89,8 +89,8 @@ namespace ACEMP.Services
             IWorksheet planilha = wb.Worksheets[0];
             planilha.Range["A6:L" + linhas["ultimaLinha"]].BorderInside();
             planilha.Range["A6:L" + linhas["ultimaLinha"]].BorderAround();
-            planilha.Range["B" + linhas["primeiraLinha"] + ":H" + linhas["linhaIrpj"]].BorderInside();
-            planilha.Range["B" + linhas["primeiraLinha"] + ":H" + linhas["linhaIrpj"]].BorderAround();
+            planilha.Range["B" + linhas["primeiraLinha"] + ":G" + linhas["linhaIrpj"]].BorderInside();
+            planilha.Range["B" + linhas["primeiraLinha"] + ":G" + linhas["linhaIrpj"]].BorderAround();
             wb.SaveAs(caminho);
         }
 
