@@ -15,38 +15,38 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_0CFF76406A978EAA27C67090C94AEECA"
-        "OwnerKey" = "8:_FE38336EAA6A4333ADAC513CA7523D65"
+        "MsmKey" = "8:_088F54469A954AEFB76A96C07FA5C8BF"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_0CFF76406A978EAA27C67090C94AEECA"
-        "OwnerKey" = "8:_C15871F09274ACCCB3281EF8B674EE5C"
+        "MsmKey" = "8:_0F4887821613E8BA92D9F1B7182D5837"
+        "OwnerKey" = "8:_088F54469A954AEFB76A96C07FA5C8BF"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_13092F95D84D87F4F2E398EDAF1E714B"
-        "OwnerKey" = "8:_FE38336EAA6A4333ADAC513CA7523D65"
+        "OwnerKey" = "8:_088F54469A954AEFB76A96C07FA5C8BF"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_C15871F09274ACCCB3281EF8B674EE5C"
-        "OwnerKey" = "8:_FE38336EAA6A4333ADAC513CA7523D65"
+        "MsmKey" = "8:_71306C0F11C70F26EA90B3561DF6337D"
+        "OwnerKey" = "8:_088F54469A954AEFB76A96C07FA5C8BF"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_DD481E4191C77444E668D12F1A2DDFCE"
-        "OwnerKey" = "8:_FE38336EAA6A4333ADAC513CA7523D65"
+        "MsmKey" = "8:_E8BC8042FB0D6BE8038AE644C7C245E4"
+        "OwnerKey" = "8:_088F54469A954AEFB76A96C07FA5C8BF"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_FE38336EAA6A4333ADAC513CA7523D65"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_E8BC8042FB0D6BE8038AE644C7C245E4"
+        "OwnerKey" = "8:_0F4887821613E8BA92D9F1B7182D5837"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -58,25 +58,25 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_DD481E4191C77444E668D12F1A2DDFCE"
+        "OwnerKey" = "8:_71306C0F11C70F26EA90B3561DF6337D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C15871F09274ACCCB3281EF8B674EE5C"
+        "OwnerKey" = "8:_0F4887821613E8BA92D9F1B7182D5837"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0CFF76406A978EAA27C67090C94AEECA"
+        "OwnerKey" = "8:_E8BC8042FB0D6BE8038AE644C7C245E4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_FE38336EAA6A4333ADAC513CA7523D65"
+        "OwnerKey" = "8:_088F54469A954AEFB76A96C07FA5C8BF"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -97,6 +97,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -113,6 +121,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -142,20 +158,20 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0CFF76406A978EAA27C67090C94AEECA"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0F4887821613E8BA92D9F1B7182D5837"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Syncfusion.Compression.Base, Version=15.4460.0.17, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:Syncfusion.XlsIO.Base, Version=15.4460.0.17, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_0CFF76406A978EAA27C67090C94AEECA"
+                    "_0F4887821613E8BA92D9F1B7182D5837"
                     {
-                    "Name" = "8:Syncfusion.Compression.Base.dll"
+                    "Name" = "8:Syncfusion.XlsIO.Base.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:Syncfusion.Compression.Base.dll"
+            "SourcePath" = "8:Syncfusion.XlsIO.Base.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_1074E5193D1D4FA3A6229AE6DAF55DFF"
@@ -204,20 +220,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C15871F09274ACCCB3281EF8B674EE5C"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_71306C0F11C70F26EA90B3561DF6337D"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Syncfusion.XlsIO.Base, Version=15.4460.0.17, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:Syncfusion.XlsIO.Wpf, Version=15.4460.0.17, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_C15871F09274ACCCB3281EF8B674EE5C"
+                    "_71306C0F11C70F26EA90B3561DF6337D"
                     {
-                    "Name" = "8:Syncfusion.XlsIO.Base.dll"
+                    "Name" = "8:Syncfusion.XlsIO.Wpf.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:Syncfusion.XlsIO.Base.dll"
+            "SourcePath" = "8:Syncfusion.XlsIO.Wpf.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_1074E5193D1D4FA3A6229AE6DAF55DFF"
@@ -235,20 +251,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_DD481E4191C77444E668D12F1A2DDFCE"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E8BC8042FB0D6BE8038AE644C7C245E4"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Syncfusion.XlsIO.Wpf, Version=15.4460.0.17, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:Syncfusion.Compression.Base, Version=15.4460.0.17, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_DD481E4191C77444E668D12F1A2DDFCE"
+                    "_E8BC8042FB0D6BE8038AE644C7C245E4"
                     {
-                    "Name" = "8:Syncfusion.XlsIO.Wpf.dll"
+                    "Name" = "8:Syncfusion.Compression.Base.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:Syncfusion.XlsIO.Wpf.dll"
+            "SourcePath" = "8:Syncfusion.Compression.Base.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_1074E5193D1D4FA3A6229AE6DAF55DFF"
@@ -332,25 +348,25 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:"
-        "ProductCode" = "8:{DB88A398-0FBA-4E11-892C-EE634B0157C0}"
-        "PackageCode" = "8:{933FB70F-8CB7-4DD3-B059-962AE895BD34}"
+        "ProductName" = "8:ACEMP"
+        "ProductCode" = "8:{3F1DD67C-1B1F-44C6-A6E8-139B9B39885A}"
+        "PackageCode" = "8:{782D04F4-7D80-4FF1-AAF6-0211B45A40D0}"
         "UpgradeCode" = "8:{C959D4B3-8663-44CA-AED5-4E3B301A4359}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.1.1"
         "Manufacturer" = "8:ACEMP"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:ACEMPInstaller"
+        "Title" = "8:ACEMP"
         "Subject" = "8:"
         "ARPCONTACT" = "8:Rômulo Ponciano"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:github.com/rponciano/ACEMP"
-        "ARPURLINFOABOUT" = "8:"
+        "ARPURLINFOABOUT" = "8:github.com/rponciano/ACEMP"
         "ARPPRODUCTICON" = "8:"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
@@ -454,7 +470,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_20421C6F834047D9A5AD22F7D9DC4BDE"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_53A78E3305B64962B5D8DEE85A676F10"
             {
             "Name" = "8:ACEMP"
             "Arguments" = "8:"
@@ -462,13 +478,13 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_FE38336EAA6A4333ADAC513CA7523D65"
+            "Target" = "8:_088F54469A954AEFB76A96C07FA5C8BF"
             "Folder" = "8:_DDCF254399FA4C1B8238576DAF632A1A"
             "WorkingFolder" = "8:_1074E5193D1D4FA3A6229AE6DAF55DFF"
             "Icon" = "8:"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_37F8904F595B49828436015E970738EF"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_604F310FDE194C06A03F589E83274D52"
             {
             "Name" = "8:ACEMP"
             "Arguments" = "8:"
@@ -476,7 +492,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_FE38336EAA6A4333ADAC513CA7523D65"
+            "Target" = "8:_088F54469A954AEFB76A96C07FA5C8BF"
             "Folder" = "8:_C5CAA7B0A1A0475F923ED5DCFA391CB7"
             "WorkingFolder" = "8:_1074E5193D1D4FA3A6229AE6DAF55DFF"
             "Icon" = "8:"
@@ -881,7 +897,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_FE38336EAA6A4333ADAC513CA7523D65"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_088F54469A954AEFB76A96C07FA5C8BF"
             {
             "SourcePath" = "8:..\\ACEMP\\obj\\x86\\Release\\ACEMP.exe"
             "TargetName" = "8:"
