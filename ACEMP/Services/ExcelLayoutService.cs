@@ -14,7 +14,7 @@ namespace ACEMP.Services
         public static void formatarValores(IWorkbook workbook, string caminho, Dictionary<string, int> linhas)
         {
             IWorksheet planilha = workbook.Worksheets[0];
-            planilha.Range["D" + linhas["linhaPis"] + ":F" + linhas["linhaIrpj"]].NumberFormat = "#,##0.00";
+            planilha.Range["D7" + ":F" + linhas["linhaIrpj"]].NumberFormat = "#,###,##0.00";
             planilha.Range["G7:L" + (linhas["ultimaLinha"] + 1)].NumberFormat = "#,##0.00";
             planilha.Range["C" + linhas["linhaPis"] + ":C" + linhas["linhaIrpj"]].NumberFormat = "0.00%";
             workbook.SaveAs(caminho);
@@ -55,7 +55,7 @@ namespace ACEMP.Services
             planilha.Range["A" + linhas["ultimaLinha"] + ":L" + (linhas["ultimaLinha"] + 11)].CellStyle.PatternColor = Color.White;
             headerImpostosStyle.FillPattern = ExcelPattern.Solid;
             headerImpostosStyle.Interior.Color = Color.LightGray;
-            planilha.Range["B" + linhas["primeiraLinha"] + ":H" + linhas["primeiraLinha"]].CellStyle = headerImpostosStyle;
+            planilha.Range["B" + linhas["primeiraLinha"] + ":F" + linhas["primeiraLinha"]].CellStyle = headerImpostosStyle;
             // salvar
             wb.SaveAs(caminho);
         }
@@ -89,8 +89,8 @@ namespace ACEMP.Services
             IWorksheet planilha = wb.Worksheets[0];
             planilha.Range["A6:L" + linhas["ultimaLinha"]].BorderInside();
             planilha.Range["A6:L" + linhas["ultimaLinha"]].BorderAround();
-            planilha.Range["B" + linhas["primeiraLinha"] + ":G" + linhas["linhaIrpj"]].BorderInside();
-            planilha.Range["B" + linhas["primeiraLinha"] + ":G" + linhas["linhaIrpj"]].BorderAround();
+            planilha.Range["B" + linhas["primeiraLinha"] + ":F" + linhas["linhaIrpj"]].BorderInside();
+            planilha.Range["B" + linhas["primeiraLinha"] + ":F" + linhas["linhaIrpj"]].BorderAround();
             wb.SaveAs(caminho);
         }
 

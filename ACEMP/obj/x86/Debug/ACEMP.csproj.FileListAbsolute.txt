@@ -1,0 +1,16 @@
+P:\DEV\ACEMP\ACEMP\bin\x86\Debug\ACEMP.exe.config
+P:\DEV\ACEMP\ACEMP\bin\x86\Debug\ACEMP.exe
+P:\DEV\ACEMP\ACEMP\bin\x86\Debug\ACEMP.pdb
+P:\DEV\ACEMP\ACEMP\bin\x86\Debug\Syncfusion.Compression.Base.dll
+P:\DEV\ACEMP\ACEMP\bin\x86\Debug\Syncfusion.XlsIO.Base.dll
+P:\DEV\ACEMP\ACEMP\bin\x86\Debug\Syncfusion.XlsIO.Wpf.dll
+P:\DEV\ACEMP\ACEMP\bin\x86\Debug\Syncfusion.Compression.Base.xml
+P:\DEV\ACEMP\ACEMP\bin\x86\Debug\Syncfusion.XlsIO.Base.xml
+P:\DEV\ACEMP\ACEMP\bin\x86\Debug\Syncfusion.XlsIO.Wpf.xml
+P:\DEV\ACEMP\ACEMP\obj\x86\Debug\ACEMP.csprojResolveAssemblyReference.cache
+P:\DEV\ACEMP\ACEMP\obj\x86\Debug\ACEMP.Main.resources
+P:\DEV\ACEMP\ACEMP\obj\x86\Debug\ACEMP.Properties.Resources.resources
+P:\DEV\ACEMP\ACEMP\obj\x86\Debug\ACEMP.csproj.GenerateResource.Cache
+P:\DEV\ACEMP\ACEMP\obj\x86\Debug\ACEMP.csproj.CoreCompileInputs.cache
+P:\DEV\ACEMP\ACEMP\obj\x86\Debug\ACEMP.exe
+P:\DEV\ACEMP\ACEMP\obj\x86\Debug\ACEMP.pdb
