@@ -33,6 +33,27 @@ namespace ACEMP.Services
             return Path.GetDirectoryName(caminho) + "\\schema.ini";
         }
 
+        public static string gerarSchemaCsvNumeroNfs(string caminho)
+        {
+            using (FileStream fs = new FileStream(Path.GetDirectoryName(caminho) + "\\schema.ini", FileMode.Create, FileAccess.Write))
+            {
+                using (StreamWriter sw = new StreamWriter(fs))
+                {
+                    string[] nomeArquivo = caminho.Split('\\');
+                    sw.WriteLine("[" + nomeArquivo.GetValue(nomeArquivo.Length - 1) + "]");
+                    sw.WriteLine("ColNameHeader=True");
+                    sw.WriteLine("Format=Delimited(;)");
+                    sw.WriteLine("DecimalSymbol=,");
+                    sw.Close();
+                    sw.Dispose();
+                }
+
+                fs.Close();
+                fs.Dispose();
+            }
+            return Path.GetDirectoryName(caminho) + "\\schema.ini";
+        }
+
         public static void deletarArquivo(string caminho)
         {
             if (File.Exists(@caminho))

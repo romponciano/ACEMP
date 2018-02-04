@@ -58,5 +58,36 @@ namespace ACEMP.Services
 
             return dt;
         }
+
+        public static DataTable csv2numeronfs(string caminho)
+        {
+            string caminhoIni = FileService.gerarSchemaCsvNumeroNfs(caminho);
+
+            DataTable dt = new DataTable("data");
+            using (OleDbConnection conexao = new OleDbConnection(
+                    "Provider=Microsoft.Jet.OLEDB.4.0;" +
+                    "Data Source=\"" + Path.GetDirectoryName(caminho) + "\";" +
+                    "Extended Properties='text;HDR=yes;'"
+                )
+            )
+            {
+                using (OleDbCommand cmd = new OleDbCommand(
+                        string.Format("select * from [{0}]", new FileInfo(caminho).Name),
+                        conexao
+                    )
+                )
+                {
+                    conexao.Open();
+                    using (OleDbDataAdapter adaptador = new OleDbDataAdapter(cmd))
+                    {
+                        adaptador.Fill(dt);
+                    }
+                }
+            }
+
+            FileService.deletarArquivo(caminhoIni);
+
+            return dt;
+        }
     }
 }

@@ -16,31 +16,31 @@
         "Entry"
         {
         "MsmKey" = "8:_0F4887821613E8BA92D9F1B7182D5837"
-        "OwnerKey" = "8:_ABD51CF6DC684689A7A1657FC481C0B2"
+        "OwnerKey" = "8:_E26A48B5BC3949809D93694BB400DA26"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_13092F95D84D87F4F2E398EDAF1E714B"
-        "OwnerKey" = "8:_ABD51CF6DC684689A7A1657FC481C0B2"
+        "OwnerKey" = "8:_E26A48B5BC3949809D93694BB400DA26"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_71306C0F11C70F26EA90B3561DF6337D"
-        "OwnerKey" = "8:_ABD51CF6DC684689A7A1657FC481C0B2"
+        "OwnerKey" = "8:_E26A48B5BC3949809D93694BB400DA26"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_ABD51CF6DC684689A7A1657FC481C0B2"
+        "MsmKey" = "8:_E26A48B5BC3949809D93694BB400DA26"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_E8BC8042FB0D6BE8038AE644C7C245E4"
-        "OwnerKey" = "8:_ABD51CF6DC684689A7A1657FC481C0B2"
+        "OwnerKey" = "8:_E26A48B5BC3949809D93694BB400DA26"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -76,7 +76,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_ABD51CF6DC684689A7A1657FC481C0B2"
+        "OwnerKey" = "8:_E26A48B5BC3949809D93694BB400DA26"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -365,15 +365,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ACEMP"
-        "ProductCode" = "8:{50B70E26-648C-443C-AAB3-8896E0000A94}"
-        "PackageCode" = "8:{9B9B4E2A-DF59-4224-8C50-C123DF6B056D}"
+        "ProductCode" = "8:{0152A757-0228-41B2-85E3-D936C655B652}"
+        "PackageCode" = "8:{010E430C-6278-486D-9381-C9816CCCE7FA}"
         "UpgradeCode" = "8:{C959D4B3-8663-44CA-AED5-4E3B301A4359}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
-        "DetectNewerInstalledVersion" = "11:FALSE"
+        "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.1.3"
+        "ProductVersion" = "8:1.2.1"
         "Manufacturer" = "8:ACEMP"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -486,7 +486,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_4DC7DA280D6A4A5DB5AD8C9E5F7DF9C5"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_4952C1BA89944DDCA0763830B3F03A5F"
             {
             "Name" = "8:ACEMP"
             "Arguments" = "8:"
@@ -494,13 +494,13 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_ABD51CF6DC684689A7A1657FC481C0B2"
+            "Target" = "8:_E26A48B5BC3949809D93694BB400DA26"
             "Folder" = "8:_C5CAA7B0A1A0475F923ED5DCFA391CB7"
             "WorkingFolder" = "8:_1074E5193D1D4FA3A6229AE6DAF55DFF"
             "Icon" = "8:"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D930B51AF0E041D39FB663F871B75454"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_BC57731477654EC2B75E07142ABD497D"
             {
             "Name" = "8:ACEMP"
             "Arguments" = "8:"
@@ -508,7 +508,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_ABD51CF6DC684689A7A1657FC481C0B2"
+            "Target" = "8:_E26A48B5BC3949809D93694BB400DA26"
             "Folder" = "8:_DDCF254399FA4C1B8238576DAF632A1A"
             "WorkingFolder" = "8:_1074E5193D1D4FA3A6229AE6DAF55DFF"
             "Icon" = "8:"
@@ -913,7 +913,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_ABD51CF6DC684689A7A1657FC481C0B2"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E26A48B5BC3949809D93694BB400DA26"
             {
             "SourcePath" = "8:..\\ACEMP\\obj\\x86\\Release\\ACEMP.exe"
             "TargetName" = "8:"

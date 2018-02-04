@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ACEMP.Services;
+using System.Windows.Forms;
 
 namespace ACEMP.Services
 {
@@ -33,7 +35,7 @@ namespace ACEMP.Services
             linhas.Add("linhaCofins", linhas["primeiraLinha"] + 2);
             linhas.Add("linhaCsll", linhas["primeiraLinha"] + 3);
             linhas.Add("linhaIrpj", linhas["primeiraLinha"] + 4);
-
+            
             gerarHeader(workbook, csv, caminho);
 
             ExcelLayoutService.formatarValores(workbook, caminho, linhas);
@@ -73,7 +75,7 @@ namespace ACEMP.Services
             workbook.Close();
             excelEngine.Dispose();
         }
-        
+
         private static void gerarModeloBase(IWorkbook wb, string caminho)
         {
             IWorksheet planilha = wb.Worksheets[0];

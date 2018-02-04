@@ -47,7 +47,7 @@ namespace ACEMP
                         foreach(String arquivo in caminhoDialogo.FileNames) {
                             DataTable original = ConversionService.csv2datatable(arquivo);
 
-                            CSV csv = CSVService.gerarcsv(original);
+                            CSV csv = CSVService.gerarcsv(original, arquivo);
 
                             string caminho = CAMINHO_SALVAR + verificarNome(csv.nomeEmpresa) + ".xlsx";
 
@@ -102,7 +102,7 @@ namespace ACEMP
         private void btnSobre_Click(object sender, EventArgs e)
         {
             DialogResult escolha = MessageBox.Show(
-                "Sua versão é: v1.1.3 \n\nPara se manter atualizado, visite a página do projeto clicando em \"Sim\".",
+                "Sua versão é: v1.2.0 \n\nPara se manter atualizado, visite a página do projeto clicando em \"Sim\".",
                 "Acesse a página do projeto",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question

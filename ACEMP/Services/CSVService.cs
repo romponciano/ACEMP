@@ -11,7 +11,7 @@ namespace ACEMP.Services
 {
     class CSVService
     {
-        public static CSV gerarcsv(DataTable original)
+        public static CSV gerarcsv(DataTable original, String arquivo)
         {
             DataTable f = new DataTable();
             f.Columns.Add("Data");
@@ -25,11 +25,12 @@ namespace ACEMP.Services
             f.Columns.Add("Líquido");
 
             int aux = 0;
+            List<string> nfsAux = gerarNumerosNfs(arquivo);
             for (int i = 0; i < original.Rows.Count; i++)
             {
                 f.Rows.Add();
                 f.Rows[i]["Data"] = original.Rows[i][4];
-                f.Rows[i]["NF"] = original.Rows[i][1];
+                f.Rows[i]["NF"] = nfsAux[i];
                 f.Rows[i]["Cliente"] = original.Rows[i][29];
                 f.Rows[i]["R$"] = original.Rows[i][50];
                 f.Rows[i]["Vr Irf"] = original.Rows[i][57];
@@ -55,7 +56,7 @@ namespace ACEMP.Services
             CSV csv = new CSV(f, nome, mes, ano, cnpj);
 
             aux = 7;
-            foreach(DataRow linha in original.Rows)
+            foreach (DataRow linha in original.Rows)
             {
                 if (linha[26].ToString().Equals(""))
                 {
@@ -67,6 +68,15 @@ namespace ACEMP.Services
             if (csv.clientesExterior.Count > 0) csv.temExterior = true;
 
             return csv;
+        }
+
+        public static List<string> gerarNumerosNfs(String arquivo)
+        {
+            DataTable numerosnfs = ConversionService.csv2numeronfs(arquivo);
+            List<string> aux = new List<string>();
+            for (int i = 0; i < numerosnfs.Rows.Count; i++)
+                aux.Add(numerosnfs.Rows[i][1].ToString());
+            return aux;
         }
     }
 }
